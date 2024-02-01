@@ -17,16 +17,17 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
+
   final String title;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
+    return Scaffold(
       appBar: AppBar(title: Text("Product Listing")),
       body: ListView(
         shrinkWrap: true,
         padding: const EdgeInsets.fromLTRB(2.0, 10.0, 2.0, 10.0),
-        children: <Widget>[
+        children: [
           ProductBox(
             name: "iPhone",
             description: "iPhone is the stylist phone ever",
@@ -34,27 +35,35 @@ class MyHomePage extends StatelessWidget {
             image: "iphone.png",
           ),
           ProductBox(
-            name: "Pixel ",
-            description: "iPhone is the stylist phone ever",
-            price: 1000,
+            name: "Pixel",
+            description: "Pixel is the most featureful phone ever",
+            price: 800,
             image: "pixel.png",
-          ),ProductBox(
+          ),
+          ProductBox(
             name: "Laptop",
-            description: "iPhone is the stylist phone ever",
-            price: 1000,
+            description: "Laptop is most productive development tool",
+            price: 2000,
             image: "laptop.png",
-          ),ProductBox(
+          ),
+          ProductBox(
             name: "Tablet",
-            description: "iPhone is the stylist phone ever",
-            price: 1000,
+            description: "Tablet is the most useful device ever for meeting",
+            price: 1500,
             image: "tablet.png",
-          ),ProductBox(
+          ),
+          ProductBox(
             name: "Pendrive",
-            description: "iPhone is the stylist phone ever",
+            description: "Pendrive is a useful storage medium",
             price: 100,
             image: "pendrive.png",
           ),
-          // Add more ProductBox widgets as needed
+          ProductBox(
+            name: "Floppy Drive",
+            description: "Floppy drive is a useful rescue storage medium",
+            price: 20,
+            image: "floppy.png",
+          ),
         ],
       ),
     );
@@ -83,15 +92,18 @@ class ProductBox extends StatelessWidget {
       child: Card(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Image.asset("appimages/" + image),
+          children: [
+            Image.asset("assets/appimages/" + image),
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(5),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Text(this.name, style: TextStyle(fontWeight: FontWeight.bold)),
+                  children: [
+                    Text(
+                      this.name,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     Text(this.description),
                     Text("Price: " + this.price.toString()),
                   ],
