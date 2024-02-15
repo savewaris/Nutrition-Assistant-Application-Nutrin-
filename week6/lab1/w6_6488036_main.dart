@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 Future<Album> fetchAlbum() async {
   // TODO 1: HTTP GET Here.
-  final response = await http.get( Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+  final response = await http.get( Uri.parse('https://jsonplaceholder.typicode.com/albums/6'));
 if (response.statusCode == 200) {
   // If the server did return a 200 OK response,
   // then parse the JSON.
