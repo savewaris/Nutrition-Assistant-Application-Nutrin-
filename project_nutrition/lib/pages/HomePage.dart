@@ -29,15 +29,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<String> menuItems = [
-    "Red Sauce",
-    "Salmon Don",
-    "Tomyum",
+    "BeefSundayRoast",
+    "CreamyTomato Soup",
+    "FishPie",
   ];
 
   final List<String> menuImages = [
-    "Red Sauce.png",
-    "Salmon Don.png",
-    "Tomyum.png",
+    "BeefSundayRoast.jpg",
+    "CreamyTomato Soup.jpg",
+    "FishPie.jpg",
   ];
 
   int selectedMenuIndex = Random().nextInt(3);
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       "Home",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       "Menu",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
@@ -108,12 +108,12 @@ class _HomePageState extends State<HomePage> {
                   ElevatedButton(
                     // Or any other button type based on your design preference
                     onPressed: () {
-                      Navigator.pushNamed(context, '/menulist');
+                      Navigator.pushNamed(context, '/Profile');
                     },
                     child: Text(
-                      "Menu List",
+                      "Profile",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
@@ -159,14 +159,14 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Dashboard",
+                "Random Meal",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             GestureDetector(
               onTap: () {
                 // Add functionality here
-                Navigator.pushNamed(context, '/dashboard');
+                Navigator.pushNamed(context, '/rmeal');
               },
               child: ProductBox(name: " ", image: "Dashboard.jpg"),
             ),

@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                 //   height: 100,
                 // ),
                 Text(
-                  'NUTRIN',
+                  'NUTRITECH',
                   style: TextStyle(
                       fontSize: 60,
                       color: Colors.white,

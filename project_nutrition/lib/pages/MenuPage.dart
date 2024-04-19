@@ -88,7 +88,7 @@ class _MenuState extends State<MenuPage> {
                     child: Text(
                       "Home",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
@@ -102,7 +102,7 @@ class _MenuState extends State<MenuPage> {
                     child: Text(
                       "Menu",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),
@@ -111,12 +111,12 @@ class _MenuState extends State<MenuPage> {
                   ElevatedButton(
                     // Or any other button type based on your design preference
                     onPressed: () {
-                      Navigator.pushNamed(context, '/menulist');
+                      Navigator.pushNamed(context, '/Profile');
                     },
                     child: Text(
-                      "Menu List",
+                      "Profile",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                       ),

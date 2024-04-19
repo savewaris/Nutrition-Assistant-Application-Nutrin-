@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -71,10 +68,20 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCoCvNRxxTtbTFDsFAPPsiLFubIbuZ2i5A',
-    appId: '1:797299833740:ios:4e6c5c2d92b98cf26d34a9',
+    appId: '1:797299833740:ios:72817d07becb38ee6d34a9',
     messagingSenderId: '797299833740',
     projectId: 'nutrition-assistance-firebase',
     storageBucket: 'nutrition-assistance-firebase.appspot.com',
-    iosBundleId: 'com.example.projectNutrition.RunnerTests',
+    iosBundleId: 'com.example.projectNutrition',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyAc9JLbfyDKA_uHrqij4cab_Az6doIa4Hw',
+    appId: '1:797299833740:web:7f52fc59762179a06d34a9',
+    messagingSenderId: '797299833740',
+    projectId: 'nutrition-assistance-firebase',
+    authDomain: 'nutrition-assistance-firebase.firebaseapp.com',
+    storageBucket: 'nutrition-assistance-firebase.appspot.com',
+  );
+
 }

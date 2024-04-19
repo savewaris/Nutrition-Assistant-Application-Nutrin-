@@ -33,15 +33,15 @@ class RecommendDishPage extends StatefulWidget {
 
 class _RecommendDishState extends State<RecommendDishPage> {
   final List<String> menuItems = [
-    "Red Sauce",
-    "Salmon Don",
-    "Tomyum",
+    "BeefSundayRoast",
+    "CreamyTomato Soup",
+    "FishPie",
   ];
 
   final List<String> menuImages = [
-    "Red Sauce.png",
-    "Salmon Don.png",
-    "Tomyum.png",
+    "BeefSundayRoast.jpg",
+    "CreamyTomato Soup.jpg",
+    "FishPie.jpg",
   ];
 
   int selectedMenuIndex = Random().nextInt(3);
@@ -93,7 +93,8 @@ class _RecommendDishState extends State<RecommendDishPage> {
                 // Add functionality here
                 Navigator.pushNamed(context, '/caloriesinfo');
               },
-              child: ProductBox(name: "Red Sauce", image: "Red Sauce.png"),
+              child: ProductBox(
+                  name: "BeefSundayRoast", image: "BeefSundayRoast.jpg"),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -101,9 +102,10 @@ class _RecommendDishState extends State<RecommendDishPage> {
             GestureDetector(
               onTap: () {
                 // Add functionality here
-                Navigator.pushNamed(context, '/caloriesinfo');
+                Navigator.pushNamed(context, '/caloriesinfo2');
               },
-              child: ProductBox(name: "Salmon Don", image: "Salmon Don.png"),
+              child: ProductBox(
+                  name: "CreamyTomato Soup", image: "CreamyTomato Soup.jpg"),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -111,9 +113,9 @@ class _RecommendDishState extends State<RecommendDishPage> {
             GestureDetector(
               onTap: () {
                 // Add functionality here
-                Navigator.pushNamed(context, '/caloriesinfo');
+                Navigator.pushNamed(context, '/caloriesinfo3');
               },
-              child: ProductBox(name: "Tomyum", image: "Tomyum.png"),
+              child: ProductBox(name: "FishPie", image: "FishPie.jpg"),
             ),
           ],
         ),
